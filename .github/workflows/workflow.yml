@@ -13,7 +13,7 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          - macos-latest
+          - macos-11
           - ubuntu-latest
         ocaml-compiler:
           - 4.08.x
@@ -39,7 +39,7 @@ jobs:
         working-directory: cohttp_lwt_jsoo_test
 
       - run: echo "PKG_CONFIG_PATH=$(brew --prefix openssl)/lib/pkgconfig" >>"$GITHUB_ENV"
-        if: ${{ matrix.os == 'macos-latest' }}
+        if: ${{ matrix.os == 'macos-11' }}
 
       - run: opam install . --deps-only --with-test
 
