@@ -1,0 +1,3 @@
+(executable
+ (name bench)
+ (libraries cohttp_server_lwt_unix lwt.unix logs logs.fmt lwt http unix))
